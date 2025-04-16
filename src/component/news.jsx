@@ -10,6 +10,50 @@ import Card from './newsRoute/Card';
 function News() {
     const [search, setSearch] = useState("general"); //business entertainment general health science sports technology
     const [newsData, setNewsData] = useState(null)
+
+    const temp =[
+    {
+        "source": {
+            "id": null,
+            "name": "CBS Sports"
+        },
+        "author": "",
+        "title": "title",
+        "description": "Description",
+        "url": "#",
+        "urlToImage":null,
+        "publishedAt": "date",
+        "content": "content"
+    },
+    {
+        "source": {
+            "id": "ars-technica",
+            "name": "Ars Technica"
+        },
+       "author": "",
+        "title": "title",
+        "description": "Description",
+        "url": "#",
+        "urlToImage":null,
+        "publishedAt": "date",
+        "content": "content"
+    },
+    {
+        "source": {
+            "id": "nbc-news",
+            "name": "NBC News"
+        },
+        "author": "",
+        "title": "title",
+        "description": "Description",
+        "url": "#",
+        "urlToImage":null,
+        "publishedAt": "date",
+        "content": "content"
+    }
+]
+
+
     const API_KEY = "9c3ed8ee95884dec979460a60f96675b"; //4YlNiYK0Djy9vABo6KaIs2M61YA041kOEgKzq0Xu
     const API_KEY2="9cc539cb7fbe4820889023ce13e06b69";
     const apiUrl=`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY2}`
@@ -28,7 +72,7 @@ function News() {
         catch(error){
             console.log(error)
         }
-        
+
         
     }
 
@@ -56,7 +100,9 @@ function News() {
                
             </nav>
             <div id="topNews">
-        {newsData?  <Card data={newsData}/> : null}
+        {newsData?  <Card data={newsData}/> :  <Card data={temp} />}
+
+       
             
         </div>
            
