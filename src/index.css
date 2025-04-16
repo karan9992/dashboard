@@ -1,0 +1,268 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto',sans-serif;
+}
+html{
+  background-color: rgba(0, 0, 0, 0.936);
+  height: 100vh;
+}
+.app-main-screen{
+  display: flex;
+  align-items: center; 
+   
+  height: 100vh;
+  
+
+}
+.to-do-list{
+  /* font-family: Arial, sans-serif; */
+  text-align: center;
+  margin-top: 5%;  
+  
+
+}
+#left{
+  width: 40%;
+  /* background-color: rgb(255, 127, 221); */
+ 
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+#right{
+  width: 60%;
+ display: flex;
+  flex-direction: column;
+  align-items:start; 
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgb(102, 46, 182); */
+}
+
+#weatherWidget{
+  box-sizing: border-box;
+  width: 98%;
+  background-color: rgb(10, 120, 83);
+  height: 30%;
+  margin-top: 3vmin ;
+  padding:2vmin ;
+  color: aliceblue;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight:100;
+}
+
+#todoWidget{
+  width: 90%;
+  background-color: rgb(10, 120, 83);
+  height: 90%;
+  margin: 3vmin;
+  padding: 2vmin;
+  border-radius: 5px;
+  color: aliceblue;
+
+
+}
+#newsWidget{
+  box-sizing: border-box;
+  width: 98%;
+  background-color: rgb(10, 120, 83);
+  height: 70%;
+  margin: 3vmin 0;
+  padding:2vmin;
+  color: aliceblue;
+  border-radius: 5px;
+  text-decoration: none;
+  
+  
+}
+
+
+h1{
+  font-size: 4rem;
+  color: white;
+  font-weight: 200;
+}
+h2{
+  font-size: 3rem;
+  color: white;
+  font-weight: 100;
+}
+ p{
+  font-size: 5vmin;
+}
+button{
+  font-size: 1.7rem;
+  font-weight: 100;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.add-button{
+  background-color: hsl(125, 55%, 51%);
+}
+.add-button:hover{
+  background-color: hsl(125, 52%, 38%);
+}
+.delete-button{
+  background-color: hsl(10, 90%, 50%);
+}
+.delete-button:hover{
+  background-color: hsl(10, 93%, 33%);
+}
+
+
+.checkbox{
+  appearance: none; /* Remove default checkbox styling */
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(200, 70%, 50%);
+  border-radius: 4px;
+  background-color: hsl(0, 0%, 97%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+}
+.checkbox:checked {
+  background-color: hsl(127, 62%, 18%);
+  border-color: #000000b1;
+}
+input[type="text"]{
+  font-size: 1.6rem;
+  padding: 10px;
+ 
+  border-radius: 5px;
+  color: rgba(18, 17, 17, 0.874);
+  outline: none;
+}
+ol{
+  padding: 0;
+}
+li{
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 10px;
+  background-color: hsl(0, 0%, 97%);
+  margin-bottom: 10px;
+margin: 2vmin;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  /* text-decoration: line-through; */
+ 
+}
+
+.text{
+  
+ flex: 1;
+ 
+}
+
+ .text1{
+  display: block;
+ flex: 1;
+ position:absolute;
+ left: 100px;
+
+
+}
+.delete-button, .move-button{
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 200px;
+  
+}
+
+.news-button{
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  border-radius:0 ;
+
+  transition: all 0.5s ease;
+
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(240, 248, 255, 0);
+ 
+  background-color: rgba(240, 248, 255, 0);
+  padding: 1px;
+  margin: 2px;
+  border-bottom: 1px solid white;
+}
+nav li{
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  margin: 0;
+  padding: 1vmin;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 100;
+}
+.news-button:hover{
+  background-color: rgba(25, 49, 5, 0.361);
+}
+#topNews{
+  
+ 
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.newsBox{
+  background-color: #000000b1;
+  height: 95%;
+  width: 40%;
+  margin: 1vmin;
+  padding: 1vmin;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.newsBox a{
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: "Roboto",sans-serif;
+  font-weight: 200;
+  font-size: 3vmin;
+  margin-top: 2vmin;
+  padding: 5px;
+    
+}
+.newsImg{
+  background-color: #4aac2395;
+  height: 50%;
+  width:  100%;
+  padding:1vmin;
+  margin: 0;padding: 0;
+  
+}
+.newsImg img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.readMore{
+  font-size: 2vmin;
+  background-color: #ffffff00;
+  padding: 1;
+ 
+  color: white;
+  text-decoration: none;
+  cursor: pointer; 
+ 
+}
