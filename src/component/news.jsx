@@ -17,12 +17,18 @@ function News() {
      const apiUrl2=`https://newsapi.org/v2/top-headlines?category=${search}&apiKey=${API_KEY2}`
 
     const getData = async() =>{
+        try{
         const response = await fetch(apiUrl2);
         const jsonData = await response.json();
         // console.log(jsonData);
         let dt = jsonData.articles.slice(0,3)
         // console.log(dt)
         setNewsData(dt)
+        }
+        catch(error){
+            console.log(error)
+        }
+        
         
     }
 
