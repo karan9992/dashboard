@@ -64,10 +64,16 @@ function News() {
         try{
         const response = await fetch(apiUrl2);
         const jsonData = await response.json();
-        // console.log(jsonData);
+        // console.log("data",jsonData);
         let dt = jsonData.articles.slice(0,3)
         // console.log(dt)
-        setNewsData(dt)
+        if(jsonData.status=="ok"){
+            // console.log("ok")
+            setNewsData(dt)
+        }else{
+            setNewsData(temp)
+        }
+       
         }
         catch(error){
             console.log(error)
